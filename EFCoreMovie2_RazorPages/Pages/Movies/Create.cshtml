@@ -1,0 +1,40 @@
+@page
+@model EFCoreMovie2_RazorPages.Pages.Movies.Create
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Create new Movie</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        <div>
+            <label asp-for="Movie.Title"></label>
+            <input asp-for="Movie.Title" />
+        </div>
+        <div>
+            <label asp-for="Movie.Year"></label>
+            <input asp-for="Movie.Year" />
+        </div>
+        <div>
+            <label asp-for="Movie.RunningTimeInMins"></label>
+            <input asp-for="Movie.RunningTimeInMins" />
+        </div>
+        <div>
+            <label asp-for="Movie.StudioId"></label>
+            <select>
+                @foreach (var item in Model.Studios)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </form>
+</div>
+</body>
+</html>

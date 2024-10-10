@@ -1,0 +1,31 @@
+@page
+@model EFCoreMovie2_RazorPages.Pages.Studios.Create
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Create new Studio</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        <div>
+            <label asp-for="Studio.Name"></label>
+            <input asp-for="Studio.Name" />
+        </div>
+        <div>
+            <label asp-for="Studio.Hqcity"></label>
+            <input asp-for="Studio.Hqcity" />
+        </div>
+        <div>
+            <label asp-for="Studio.NoOfEmployees"></label>
+            <input asp-for="Studio.NoOfEmployees" />
+        </div>
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </form>
+</div>
+</body>
+</html>
